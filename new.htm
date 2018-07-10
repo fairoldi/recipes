@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Recipes</title>
+  <style>
+    .thumbnail {
+      min-height: 95px;
+      max-height: 95px;
+      height: 95px;
+      min-width: 95px;
+      max-width: 95px;
+      width: 95px;
+      object-fit: cover;
+
+    }
+
+    .header {
+      color: #ee6e73;
+      font-weight: 300;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <ul id="type" class="dropdown-content">
+      <li>
+        <a href="#!">Meat</a>
+      </li>
+      <li>
+        <a href="#!">Fish</a>
+      </li>
+      <li>
+        <a href="#!">Vegetable</a>
+      </li>
+      <li>
+        <a href="#!">Dessert</a>
+      </li>
+      <li>
+        <a href="#">Breakfast</a>
+      </li>
+    </ul>
+    <ul id="cooking-method" class="dropdown-content">
+      <li>
+        <a href="#!">No cooking</a>
+      </li>
+      <li>
+        <a href="#!">Stovetop</a>
+      </li>
+      <li>
+        <a href="#!">Grill</a>
+      </li>
+      <li>
+        <a href="#!">Oven</a>
+      </li>
+    </ul>
+    <ul id="user" class="dropdown-content">
+      <li>
+        <a href="#!">Log in</a>
+      </li>
+      <li>
+        <a href="#!">Register</a>
+      </li>
+      <li>
+        <a href="#!">Logout</a>
+      </li>
+    </ul>
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-full" class="hide-on-med-and-down right">
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="type">Food type
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="cooking-method">Cooking method
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="user">
+              <i class="material-icons right">arrow_drop_down</i>
+              <i class="material-icons ">person</i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav" id="nav-mobile">
+    <li>
+      <a href="#" class="subheader">Food type</a>
+    </li>
+    <li>
+      <a href="#">Meat</a>
+    </li>
+    <li>
+      <a href="#">Fish</a>
+    </li>
+    <li>
+      <a href="#">Vegetable</a>
+    </li>
+    <li>
+      <a href="#">Dessert</a>
+    </li>
+    <li>
+      <a href="#">Breakfast</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a href="#" class="subheader">Cooking method</a>
+    </li>
+    <li>
+      <a href="#">No cooking</a>
+    </li>
+    <li>
+      <a href="#">Stovetop</a>
+    </li>
+    <li>
+      <a href="#">Grill</a>
+    </li>
+    <li>
+      <a href="#">Oven</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a href="#" class="subheader">User</a>
+    </li>
+    <li>
+      <a href="#">Log in</a>
+    </li>
+    <li>
+      <a href="#">Register</a>
+    </li>
+    <li>
+      <a href="#">Logout</a>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="col s12">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="chips chips-autocomplete" id="foodtype"></div>
+        </div>
+        <div class="col s12 m6">
+          <div class="chips chips-autocomplete" id="cookingmethod"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 input-field">
+          <i class="material-icons prefix">edit</i>
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="col s12">
+          <div class="card">
+
+            <div class="card-content">
+              <span class="header card-title">Picture</span>
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" id="picture">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">edit</i>
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Description</label>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col s12">
+          <h5 class="header">Ingredients</h5>
+        </div>
+
+
+
+        <div class="col s12 m4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="img/ingredients/resized/bacon.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <input type="text" id="ingredients1" placeholder="ingredient" value="Bacon">
+                <input type="text" id="amounts1" placeholder="amount" class="light-blue-text" value="5 strips">
+              </div>
+              <div class="card-action">
+                <a href="#!" class="btn-small red">
+                  <i class="material-icons">remove</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="img/ingredients/resized/eggs.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <input type="text" id="ingredients1" placeholder="ingredient" value="Eggs">
+                <input type="text" id="amounts1" placeholder="amount" class="light-blue-text" value="2">
+              </div>
+              <div class="card-action">
+                <a href="#!" class="btn-small red">
+                  <i class="material-icons">remove</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content">
+
+              <input type="text" id="ingredients1" placeholder="ingredient">
+              <input type="text" id="amounts1" placeholder="amount" class="light-blue-text">
+
+            </div>
+            <div class="card-action">
+              <a href="#!" class="btn-small">
+                <i class="material-icons">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class=" row ">
+        <div class="col s12 ">
+          <h5 class="header ">Tools</h5>
+        </div>
+        <div class="col s12 m4 ">
+          <div class="card horizontal ">
+            <div class="card-image ">
+              <img src="img/tools/resized/carbon-steel-skillet.jpg ">
+            </div>
+            <div class="card-stacked ">
+              <div class="card-content">
+                <input type="text" id="tool1" placeholder="tool" value="Skillet">
+                <input type="text" id="note1" placeholder="nodes" class="light-blue-text" value="12">
+              </div>
+              <div class="card-action ">
+                <a href="#! " class="btn-small red">
+                  <i class="material-icons ">remove</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4 ">
+          <div class="card ">
+            <div class="card-content ">
+              <input type="text" id="tools2" placeholder="Tool">
+              <input type="text" id="note2" placeholder="Notes" class="light-blue-text ">
+            </div>
+            <div class="card-action ">
+              <a href="#! " class="btn-small ">
+                <i class="material-icons ">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row ">
+        <div class="col s12 ">
+          <h5 class="header ">Instructions</h5>
+        </div>
+        <div class="card col s12 ">
+          <!-- <div class="card-content "> -->
+          <div class="input-field ">
+            <div class="input-field ">
+              <i class="material-icons prefix ">edit</i>
+              <textarea id="step1" class="materialize-textarea ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto fugit iure nemo optio nulla! Praesentium, et in explicabo, consequuntur error, laboriosam reiciendis animi rerum recusandae quae tempora corporis doloremque totam?</textarea>
+              <label for="step1 ">Step1</label>
+            </div>
+          </div>
+          <!-- </div> -->
+          <div class="card-action ">
+            <a href="#! " class="btn-small red right ">
+              <i class="material-icons ">remove</i>
+            </a>
+            <a href="#! " class="btn-small disabled ">
+              <i class="material-icons ">arrow_drop_up</i>
+            </a>
+            <a href="#! " class="btn-small ">
+              <i class="material-icons ">arrow_drop_down</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card col s12 ">
+          <!-- <div class="card-content "> -->
+          <div class="input-field ">
+            <div class="input-field ">
+              <i class="material-icons prefix ">edit</i>
+              <textarea id="step2" class="materialize-textarea ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, fugit?</textarea>
+              <label for="step2">Step2</label>
+            </div>
+          </div>
+          <!-- </div> -->
+          <div class="card-action ">
+            <a href="#! " class="btn-small red right ">
+              <i class="material-icons ">remove</i>
+            </a>
+            <a href="#! " class="btn-small ">
+              <i class="material-icons ">arrow_drop_up</i>
+            </a>
+            <a href="#! " class="btn-small ">
+              <i class="material-icons ">arrow_drop_down</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card col s12 ">
+          <!-- <div class="card-content "> -->
+          <div class="input-field ">
+            <div class="input-field ">
+              <i class="material-icons prefix ">edit</i>
+              <textarea id="step3" class="materialize-textarea ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere consequatur aliquam ex natus labore enim!</textarea>
+              <label for="step3">Step3</label>
+            </div>
+          </div>
+          <!-- </div> -->
+          <div class="card-action ">
+            <a href="#! " class="btn-small red right">
+              <i class="material-icons ">remove</i>
+            </a>
+            <a href="#! " class="btn-small">
+              <i class="material-icons ">arrow_drop_up</i>
+            </a>
+            <a href="#! " class="btn-small disabled">
+              <i class="material-icons ">arrow_drop_down</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card col s12 ">
+          <!-- <div class="card-content "> -->
+          <div class="input-field ">
+            <i class="material-icons prefix">edit</i>
+            <input id="step4" type="text">
+            <label for="step4">Step4</label>
+          </div>
+          <!-- </div> -->
+          <div class="card-action ">
+            <a href="#! " class="btn-small cyan">
+              <i class="material-icons ">add</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="fixed-action-btn ">
+      <a class="btn-floating btn-large waves-effect waves-light red ">
+        <i class="material-icons ">save</i>
+      </a>
+    </div>
+  </form>
+  <script src="js/materialize.min.js "></script>
+  <script src="js/app.js "></script>
+</body>
+
+</html>
