@@ -9,13 +9,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Recipes</title>
   <style>
-    .thumbnail {
-      min-height: 95px;
-      max-height: 95px;
-      height: 95px;
-      min-width: 95px;
-      max-width: 95px;
-      width: 95px;
+    .thumbnail-big {
+      min-height: 160px;
+      max-height: 160px;
+      height: 160px;
+      width: 120px !important;
+      /* min-width: 95px; */
+      /* max-width: 95px; */
       object-fit: cover;
 
     }
@@ -210,96 +210,106 @@
 
 
 
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card horizontal">
             <div class="card-image">
-              <img src="img/ingredients/resized/bacon.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <input type="text" id="ingredients1" placeholder="ingredient" value="Bacon">
-                <input type="text" id="amounts1" placeholder="amount" class="light-blue-text" value="5 strips">
-              </div>
-              <div class="card-action">
+              <img class="thumbnail-big" src="img/ingredients/resized/bacon.jpg">
+              <span class="card-title">
                 <a href="#!" class="btn-small red">
                   <i class="material-icons">remove</i>
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
+              </span>
 
-        <div class="col s12 m4">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="img/ingredients/resized/eggs.jpg">
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <input type="text" id="ingredients1" placeholder="ingredient" value="Eggs">
-                <input type="text" id="amounts1" placeholder="amount" class="light-blue-text" value="2">
+                <input type="text" id="ingredients2" placeholder="ingredient" value="Bacon">
+                <input type="text" id="amounts2" placeholder="amount" class="light-blue-text" value="5 strips">
               </div>
-              <div class="card-action">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img class="thumbnail-big" src="img/ingredients/resized/eggs.jpg">
+              <span class="card-title">
                 <a href="#!" class="btn-small red">
                   <i class="material-icons">remove</i>
                 </a>
+              </span>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <input type="text" id="ingredients3" placeholder="ingredient" value="Eggs">
+                <input type="text" id="amounts3" placeholder="amount" class="light-blue-text" value="2">
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-content">
 
-              <input type="text" id="ingredients1" placeholder="ingredient">
-              <input type="text" id="amounts1" placeholder="amount" class="light-blue-text">
-
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img class="thumbnail-big" src="img/blank.jpg">
+              <span class="card-title">
+                <a href="#!" class="btn-small cyan">
+                  <i class="material-icons">add</i>
+                </a>
+              </span>
             </div>
-            <div class="card-action">
-              <a href="#!" class="btn-small">
-                <i class="material-icons">add</i>
-              </a>
+            <div class="card-stacked">
+              <div class="card-content">
+                <input type="text" id="ingredients4" placeholder="ingredient">
+                <input type="text" id="amounts4" placeholder="amount" class="light-blue-text">
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
 
       <div class=" row ">
         <div class="col s12 ">
           <h5 class="header ">Tools</h5>
         </div>
-        <div class="col s12 m4 ">
+
+        <div class="col s12 m6 l4">
           <div class="card horizontal ">
             <div class="card-image ">
-              <img src="img/tools/resized/carbon-steel-skillet.jpg ">
+              <img class="thumbnail-big" src="img/tools/resized/carbon-steel-skillet.jpg ">
+              <span class="card-title">
+                <a href="#!" class="btn-small red">
+                  <i class="material-icons">remove</i>
+                </a>
+              </span>
             </div>
             <div class="card-stacked ">
               <div class="card-content">
                 <input type="text" id="tool1" placeholder="tool" value="Skillet">
                 <input type="text" id="note1" placeholder="nodes" class="light-blue-text" value="12">
               </div>
-              <div class="card-action ">
-                <a href="#! " class="btn-small red">
-                  <i class="material-icons ">remove</i>
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
-        <div class="col s12 m4 ">
-          <div class="card ">
-            <div class="card-content ">
-              <input type="text" id="tools2" placeholder="Tool">
-              <input type="text" id="note2" placeholder="Notes" class="light-blue-text ">
+        <div class="col s12 m6 l4">
+          <div class="card horizontal ">
+            <div class="card-image ">
+              <img class="thumbnail-big" src="img/blank.jpg ">
+              <span class="card-title">
+                <a href="#!" class="btn-small cyan">
+                  <i class="material-icons">add</i>
+                </a>
+              </span>
             </div>
-            <div class="card-action ">
-              <a href="#! " class="btn-small ">
-                <i class="material-icons ">add</i>
-              </a>
+            <div class="card-stacked ">
+              <div class="card-content">
+                <input type="text" id="tool2" placeholder="Tool">
+                <input type="text" id="note2" placeholder="Notes" class="light-blue-text">
+              </div>
             </div>
           </div>
         </div>
@@ -307,8 +317,8 @@
       </div>
 
       <div class="row ">
-        <div class="col s12 ">
-          <h5 class="header ">Instructions</h5>
+        <div class="col s12">
+          <h5 class="header">Instructions</h5>
         </div>
         <div class="card col s12 ">
           <!-- <div class="card-content "> -->
@@ -316,7 +326,7 @@
             <div class="input-field ">
               <i class="material-icons prefix ">edit</i>
               <textarea id="step1" class="materialize-textarea ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto fugit iure nemo optio nulla! Praesentium, et in explicabo, consequuntur error, laboriosam reiciendis animi rerum recusandae quae tempora corporis doloremque totam?</textarea>
-              <label for="step1 ">Step1</label>
+              <label for="step1">Step1</label>
             </div>
           </div>
           <!-- </div> -->
@@ -395,9 +405,8 @@
         </div>
       </div>
     </div>
-    </div>
     <div class="fixed-action-btn ">
-      <a class="btn-floating btn-large waves-effect waves-light red ">
+      <a class="btn-floating btn-large waves-effect waves-light red" href="recipe.htm">
         <i class="material-icons ">save</i>
       </a>
     </div>
